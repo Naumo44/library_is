@@ -1,0 +1,851 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1164</width>
+    <height>855</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>LIBRARY_IS</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QTabWidget" name="tabWidget">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>0</y>
+      <width>1141</width>
+      <height>821</height>
+     </rect>
+    </property>
+    <property name="currentIndex">
+     <number>5</number>
+    </property>
+    <widget class="QWidget" name="book_find">
+     <attribute name="title">
+      <string>Поиск книги</string>
+     </attribute>
+     <widget class="QTableWidget" name="book_find_table">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>310</y>
+        <width>1111</width>
+        <height>471</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QTableWidget {
+    border: 2px solid black; /* Устанавливаем толщину границ таблицы */
+}
+
+QTableWidget::item {
+    border: 1px solid gray; /* Устанавливаем толщину границ ячеек */
+}
+
+QHeaderView::section {
+    font-weight: bold; /* Жирный шрифт для заголовков */
+    background-color: #f0f0f0; /* Цвет фона заголовков (по желанию) */
+}</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="book_find_header">
+      <property name="geometry">
+       <rect>
+        <x>270</x>
+        <y>30</y>
+        <width>491</width>
+        <height>81</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">font-size: 30px; /* Установите желаемый размер шрифта */
+</string>
+      </property>
+      <property name="text">
+       <string>Список библиотечных материалов</string>
+      </property>
+     </widget>
+     <widget class="QComboBox" name="book_fin_profile_select">
+      <property name="geometry">
+       <rect>
+        <x>30</x>
+        <y>130</y>
+        <width>341</width>
+        <height>51</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QComboBox" name="book_find_publisher_select">
+      <property name="geometry">
+       <rect>
+        <x>400</x>
+        <y>130</y>
+        <width>351</width>
+        <height>51</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QComboBox" name="book_find_status_select">
+      <property name="geometry">
+       <rect>
+        <x>780</x>
+        <y>130</y>
+        <width>291</width>
+        <height>51</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QLabel" name="book_find_profile_label">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>180</y>
+        <width>341</width>
+        <height>61</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">font-size: 20px</string>
+      </property>
+      <property name="text">
+       <string>Направление обучения (категория)</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="book_find_publisher_label">
+      <property name="geometry">
+       <rect>
+        <x>440</x>
+        <y>180</y>
+        <width>291</width>
+        <height>61</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">font-size: 20px</string>
+      </property>
+      <property name="text">
+       <string>Наименование издания</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="book_find_status_label">
+      <property name="geometry">
+       <rect>
+        <x>870</x>
+        <y>180</y>
+        <width>291</width>
+        <height>61</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">font-size: 20px</string>
+      </property>
+      <property name="text">
+       <string>Статус</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="book_find_confirm">
+      <property name="geometry">
+       <rect>
+        <x>470</x>
+        <y>240</y>
+        <width>161</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Подтвердить фильтрацию</string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="user_find">
+     <attribute name="title">
+      <string>Поиск пользователя</string>
+     </attribute>
+     <widget class="QTableWidget" name="user_find_table">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>220</y>
+        <width>1101</width>
+        <height>531</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QTableWidget {
+    border: 2px solid black; /* Устанавливаем толщину границ таблицы */
+}
+
+QTableWidget::item {
+    border: 1px solid gray; /* Устанавливаем толщину границ ячеек */
+}
+
+QHeaderView::section {
+    font-weight: bold; /* Жирный шрифт для заголовков */
+    background-color: #f0f0f0; /* Цвет фона заголовков (по желанию) */
+}</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="user_find_header">
+      <property name="geometry">
+       <rect>
+        <x>360</x>
+        <y>0</y>
+        <width>441</width>
+        <height>81</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">font-size: 30px; /* Установите желаемый размер шрифта */
+</string>
+      </property>
+      <property name="text">
+       <string>Список пользователей</string>
+      </property>
+     </widget>
+     <widget class="QComboBox" name="user_find_profile_select">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>80</y>
+        <width>431</width>
+        <height>51</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QLabel" name="user_find_profile_label">
+      <property name="geometry">
+       <rect>
+        <x>90</x>
+        <y>130</y>
+        <width>341</width>
+        <height>61</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">font-size: 20px</string>
+      </property>
+      <property name="text">
+       <string>Направление обучения</string>
+      </property>
+     </widget>
+     <widget class="QComboBox" name="user_find_type_select">
+      <property name="geometry">
+       <rect>
+        <x>450</x>
+        <y>80</y>
+        <width>361</width>
+        <height>51</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QLabel" name="user_find_type_label">
+      <property name="geometry">
+       <rect>
+        <x>520</x>
+        <y>130</y>
+        <width>341</width>
+        <height>61</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">font-size: 20px</string>
+      </property>
+      <property name="text">
+       <string>Тип пользователя</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="user_find_confirm">
+      <property name="geometry">
+       <rect>
+        <x>870</x>
+        <y>80</y>
+        <width>161</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Подтвердить фильтрацию</string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="book_addition">
+     <attribute name="title">
+      <string>Добавить книгу</string>
+     </attribute>
+     <widget class="QLabel" name="add_book_title">
+      <property name="geometry">
+       <rect>
+        <x>260</x>
+        <y>110</y>
+        <width>551</width>
+        <height>61</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">font-size: 24px</string>
+      </property>
+      <property name="text">
+       <string>Добавление нового библиотечного материала</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="book_add_confirm_button">
+      <property name="geometry">
+       <rect>
+        <x>350</x>
+        <y>570</y>
+        <width>311</width>
+        <height>71</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">font-size: 20px</string>
+      </property>
+      <property name="text">
+       <string>Добавить</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="book_add_name_edit_label">
+      <property name="geometry">
+       <rect>
+        <x>570</x>
+        <y>230</y>
+        <width>401</width>
+        <height>61</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">font-size: 20px</string>
+      </property>
+      <property name="text">
+       <string>Наименование библиотечного материала</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="book_add_profile_id_label">
+      <property name="geometry">
+       <rect>
+        <x>570</x>
+        <y>310</y>
+        <width>491</width>
+        <height>61</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">font-size: 20px</string>
+      </property>
+      <property name="text">
+       <string>Направление обучения (категория)</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="book_add_publisher_label">
+      <property name="geometry">
+       <rect>
+        <x>570</x>
+        <y>400</y>
+        <width>291</width>
+        <height>61</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">font-size: 20px</string>
+      </property>
+      <property name="text">
+       <string>Наименование издания</string>
+      </property>
+     </widget>
+     <widget class="QTextEdit" name="book_add_isbn_edit">
+      <property name="geometry">
+       <rect>
+        <x>30</x>
+        <y>480</y>
+        <width>521</width>
+        <height>51</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QLabel" name="book_add_isbn_label">
+      <property name="geometry">
+       <rect>
+        <x>580</x>
+        <y>480</y>
+        <width>261</width>
+        <height>61</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">font-size: 20px</string>
+      </property>
+      <property name="text">
+       <string>ISBN</string>
+      </property>
+     </widget>
+     <widget class="QTextEdit" name="book_name_edit">
+      <property name="geometry">
+       <rect>
+        <x>30</x>
+        <y>240</y>
+        <width>521</width>
+        <height>51</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QTextEdit" name="book_add_publisher_edit">
+      <property name="geometry">
+       <rect>
+        <x>30</x>
+        <y>400</y>
+        <width>521</width>
+        <height>51</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QComboBox" name="book_add_profile_select">
+      <property name="geometry">
+       <rect>
+        <x>30</x>
+        <y>320</y>
+        <width>521</width>
+        <height>51</height>
+       </rect>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="user_add">
+     <attribute name="title">
+      <string>Добавить пользователя</string>
+     </attribute>
+     <widget class="QLabel" name="user_add_header">
+      <property name="geometry">
+       <rect>
+        <x>330</x>
+        <y>40</y>
+        <width>401</width>
+        <height>61</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">font-size: 24px</string>
+      </property>
+      <property name="text">
+       <string>Добавление нового пользователя</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="user_add_profile_label">
+      <property name="geometry">
+       <rect>
+        <x>560</x>
+        <y>230</y>
+        <width>401</width>
+        <height>61</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">font-size: 20px</string>
+      </property>
+      <property name="text">
+       <string>Идентификатор направления обучения</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="user_add_type_label">
+      <property name="geometry">
+       <rect>
+        <x>570</x>
+        <y>380</y>
+        <width>261</width>
+        <height>61</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">font-size: 20px</string>
+      </property>
+      <property name="text">
+       <string>Тип пользователя</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="user_add_name_label">
+      <property name="geometry">
+       <rect>
+        <x>560</x>
+        <y>160</y>
+        <width>261</width>
+        <height>61</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">font-size: 20px</string>
+      </property>
+      <property name="text">
+       <string>Полное имя (ФИО)</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="user_add_phone_label">
+      <property name="geometry">
+       <rect>
+        <x>560</x>
+        <y>300</y>
+        <width>291</width>
+        <height>61</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">font-size: 20px</string>
+      </property>
+      <property name="text">
+       <string>Контактный номер телефона</string>
+      </property>
+     </widget>
+     <widget class="QComboBox" name="user_add_profile_select">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>240</y>
+        <width>521</width>
+        <height>51</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QTextEdit" name="user_add_name_edit">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>170</y>
+        <width>521</width>
+        <height>51</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QTextEdit" name="user_add_phone_edit">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>310</y>
+        <width>521</width>
+        <height>51</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QComboBox" name="user_add_type_select">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>380</y>
+        <width>521</width>
+        <height>51</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="user_add_confirm">
+      <property name="geometry">
+       <rect>
+        <x>340</x>
+        <y>480</y>
+        <width>311</width>
+        <height>71</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">font-size: 20px</string>
+      </property>
+      <property name="text">
+       <string>Добавить</string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="book_ex">
+     <attribute name="title">
+      <string>Выдача книги</string>
+     </attribute>
+     <widget class="QPushButton" name="ex_confirm">
+      <property name="geometry">
+       <rect>
+        <x>430</x>
+        <y>510</y>
+        <width>181</width>
+        <height>71</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Подтвердить</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="ex_publisher_label">
+      <property name="geometry">
+       <rect>
+        <x>580</x>
+        <y>320</y>
+        <width>291</width>
+        <height>61</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">font-size: 20px</string>
+      </property>
+      <property name="text">
+       <string>Наименование издания</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="ex_user_name_label">
+      <property name="geometry">
+       <rect>
+        <x>580</x>
+        <y>250</y>
+        <width>401</width>
+        <height>61</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">font-size: 20px</string>
+      </property>
+      <property name="text">
+       <string>Полное имя пользователя</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="ex_book_name_label">
+      <property name="geometry">
+       <rect>
+        <x>580</x>
+        <y>180</y>
+        <width>261</width>
+        <height>61</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">font-size: 20px</string>
+      </property>
+      <property name="text">
+       <string>Название книги</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="ex_header">
+      <property name="geometry">
+       <rect>
+        <x>430</x>
+        <y>70</y>
+        <width>181</width>
+        <height>61</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">font-size: 24px</string>
+      </property>
+      <property name="text">
+       <string>Выдача книги</string>
+      </property>
+     </widget>
+     <widget class="QComboBox" name="ex_book_name_select">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>190</y>
+        <width>521</width>
+        <height>51</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QComboBox" name="ex_user_name_select">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>260</y>
+        <width>521</width>
+        <height>51</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QComboBox" name="ex_publisher_select">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>330</y>
+        <width>521</width>
+        <height>51</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QComboBox" name="ex_profile_select">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>400</y>
+        <width>521</width>
+        <height>51</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QLabel" name="ex_profile_label">
+      <property name="geometry">
+       <rect>
+        <x>580</x>
+        <y>390</y>
+        <width>451</width>
+        <height>61</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">font-size: 20px</string>
+      </property>
+      <property name="text">
+       <string>Наименование профиля (категория)</string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="book_inc">
+     <attribute name="title">
+      <string>Возврат книги</string>
+     </attribute>
+     <widget class="QLabel" name="inc_book_name_label">
+      <property name="geometry">
+       <rect>
+        <x>600</x>
+        <y>180</y>
+        <width>261</width>
+        <height>61</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">font-size: 20px</string>
+      </property>
+      <property name="text">
+       <string>Название книги</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="inc_confirm">
+      <property name="geometry">
+       <rect>
+        <x>450</x>
+        <y>510</y>
+        <width>181</width>
+        <height>71</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Подтвердить</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="inc_user_name_label">
+      <property name="geometry">
+       <rect>
+        <x>600</x>
+        <y>250</y>
+        <width>401</width>
+        <height>61</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">font-size: 20px</string>
+      </property>
+      <property name="text">
+       <string>Полное имя пользователя</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="inc_publisher_label">
+      <property name="geometry">
+       <rect>
+        <x>600</x>
+        <y>320</y>
+        <width>291</width>
+        <height>61</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">font-size: 20px</string>
+      </property>
+      <property name="text">
+       <string>Наименование издания</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="inc_header">
+      <property name="geometry">
+       <rect>
+        <x>410</x>
+        <y>70</y>
+        <width>181</width>
+        <height>61</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">font-size: 24px</string>
+      </property>
+      <property name="text">
+       <string>Возврат книги</string>
+      </property>
+     </widget>
+     <widget class="QComboBox" name="inc_book_name_select">
+      <property name="geometry">
+       <rect>
+        <x>50</x>
+        <y>190</y>
+        <width>521</width>
+        <height>51</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QComboBox" name="inc_user_name_select">
+      <property name="geometry">
+       <rect>
+        <x>50</x>
+        <y>260</y>
+        <width>521</width>
+        <height>51</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QComboBox" name="inc_publisher_select">
+      <property name="geometry">
+       <rect>
+        <x>50</x>
+        <y>330</y>
+        <width>521</width>
+        <height>51</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QComboBox" name="inc_profile_select">
+      <property name="geometry">
+       <rect>
+        <x>50</x>
+        <y>400</y>
+        <width>521</width>
+        <height>51</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QLabel" name="inc_profile_label">
+      <property name="geometry">
+       <rect>
+        <x>600</x>
+        <y>390</y>
+        <width>491</width>
+        <height>61</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">font-size: 20px</string>
+      </property>
+      <property name="text">
+       <string>Направление обучения (категория)</string>
+      </property>
+     </widget>
+    </widget>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1164</width>
+     <height>21</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
